@@ -1,0 +1,28 @@
+{
+  "name": "geocode-locator",
+  "version": "0.0.1",
+  "description": "Utility using Google Geocoding service for Store Locator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aeisolution/geocode-locator.git"
+  },
+  "keywords": [
+    "geocode",
+    "google",
+    "maps",
+    "locator"
+  ],
+  "author": "aeisolution <info@aeisolution.it> (=)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aeisolution/geocode-locator/issues"
+  },
+  "homepage": "https://github.com/aeisolution/geocode-locator#readme",
+  "dependencies": {
+    "@google/maps": "^0.4.3"
+  }
+}
