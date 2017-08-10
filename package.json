@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/aeisolution/geocode-locator#readme",
   "dependencies": {
-    "@google/maps": "^0.4.3"
+    "@google/maps": "^0.4.3",
+    "mongodb": "^2.2.31"
   }
 }
