@@ -19,6 +19,7 @@ googleMapsClient.geocode({
 const cfg = require('./config');
 
 let Filiali = require('./imports/filiali');
+let Farmacie = require('./imports/farmacie');
 
 // ---- DB Connection ----
 let MongoClient = require('mongodb').MongoClient,
@@ -28,12 +29,14 @@ MongoClient.connect(MONGODB_URI, function (err, db) {
     "use strict";
     if (err) throw err;
 
-    let dataImport = new Filiali(db);
+    //let dataImport = new Filiali(db);
+    let dataImport = new Farmacie(db);
 
     dataImport.getAll()
                  .then(function(data){
                     for(let i=0, len=data.length;i < len; i++) {
                       console.log(i + ' - item:');
+                      //console.dir(data[i]);
 
                       dataImport.getGeocode(data[i],
                                   function(err, response){
@@ -45,6 +48,7 @@ MongoClient.connect(MONGODB_URI, function (err, db) {
                                         console.dir(data.result);
                                       });
                                   });
+
                    }
                  });
 });
